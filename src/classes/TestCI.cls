@@ -5,6 +5,7 @@
 public with sharing class TestCI {
     String hello = 'Hello';
     public String helloWord(){
+        hello += ' this ';
         return hello + ' World';
     }
 }
