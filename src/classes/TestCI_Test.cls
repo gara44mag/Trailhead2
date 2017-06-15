@@ -18,27 +18,21 @@ private class TestCI_Test {
 	*/
     static testMethod void testBehavior() {
         /*
-        * @GIVEN <a set of initial conditions.>
+        * @GIVEN we have an instance of TestCI class
         */
+        TestCI tci = new TestCI();
+        /*
+        * @GIVEN we have a valid person name
+        */
+        String personName = 'Everardo';
         
         /*
-        * @AND <more initial conditions>
+        * @WHEN we use the helloPerson method
         */
-        
+        String res = tci.helloPerson(personName);
         /*
-        * @WHEN <some action is fired by the actor>
+        * @THEN we have a greeting phrase
         */
-        
-        /*
-        * @THEN <a testeable output should be generated>
-        */
-        
-        /*
-        * @AND <any other output variables>
-        */
-        
-        /*
-        * @AND <more output variables>
-        */
+        System.assert(res.equals('Hello ' + personName));
     }
 }

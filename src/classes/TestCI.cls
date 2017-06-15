@@ -3,9 +3,9 @@
  */
 
 public with sharing class TestCI {
-    String hello = 'Hello';
-    public String helloWord(){
-        hello += ' this ';
-        return hello + ' World';
+    String hello = 'Hello ';
+    public String helloPerson(String name){
+        String personName  = name;
+        return hello + personName;
     }
 }
